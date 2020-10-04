@@ -97,9 +97,7 @@ socket.on('onSite',(current) => {
 
 
 socket.on('location',(url) => {
-    const html = Mustache.render(locationTemplate, {
-        url
-    })
+    const html = Mustache.render(locationTemplate, {url})
     $messages.insertAdjacentHTML('beforeend', html)
     $buttonLocation.removeAttribute('disabled')
  })
